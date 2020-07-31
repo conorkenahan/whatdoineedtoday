@@ -1,7 +1,7 @@
 What Do You Need Today?
 ======================
 
-https://conorkenahan.github.io/whatdoineedtoday/
+https://conorkenahan.github.io/whatdoyouneedtoday/
 
 Summary
 -------
