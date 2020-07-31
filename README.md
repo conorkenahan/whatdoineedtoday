@@ -19,3 +19,8 @@ If there is high pollen, it will suggest allergy medicine.
 Technology
 ----------
 This app uses HTML CSS, JavaScript and jQuery to utilize 3 separate APIs. These APIs gather longitude & latitude, forecast, UV, and pollen count based off of the users zip code.
+
+
+Testing Notes
+-------------
+*To see the current full range of options for users, type "**00000**" into the zip code field.*
