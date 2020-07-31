@@ -42,7 +42,9 @@ function locationToLongLat(location){
     userLat = data.records[0].fields.latitude;
     getWeather(userLong, userLat);
   })
-  .catch(err=> alert("Something went wrong. Make sure you're connected to the internet, or try again.")
+  .catch(err=> {
+   alert("Something went wrong. Make sure you're connected to the internet, or try again.");
+   $('#loading').addClass('hidden');}
   );
 }
 
