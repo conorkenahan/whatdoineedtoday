@@ -66,6 +66,7 @@ function getWeather(userLong, userLat){
     getPollen(userLong, userLat);
   })
   .catch(err=> alert("Something went wrong. Make sure you're connected to the internet, or try again.")
+
   );
 }
 
@@ -100,18 +101,20 @@ function getPollen(userLong, userLat){
 
 function displayResults(weather, uvi, pollenRisk){
   $('#loading').addClass('hidden');
-  $('#loading').addClass('hidden');
   let count = 0;
+  console.log(weather);
   if (weather.toLowerCase() === 'thunderstorm' || weather.toLowerCase() === 'drizzle' || weather.toLowerCase() === 'rain') {
     count++;
     $('#rainIndicator').html(`<p>
     It's going to rain today. Don't forget your umbrella!</p>
      <i class="wi wi-day-sprinkle colorRainIcon"></i>`);
+     $('#rainIndicator').removeClass('hidden');
   }
   if (weather.toLowerCase() === 'snow') {
     count++;
     $('#snowIndicator').html(`<p>It's going to snow today! Make sure you bring boots and gloves.</p>
      <i class="wi wi-snow colorSnowIcon"></i>`);
+     $('#snowIndicator').removeClass('hidden');
   }
   if (userTime < '18:00') {
     if (uvi > 3) {
@@ -125,6 +128,7 @@ function displayResults(weather, uvi, pollenRisk){
     count++;
     $('#pollenIndicator').html(`<p>Pollen is high! If you suffer from allergies, bring allergy medicine!</p>
      <i class="wi wi-snowflake-cold colorPollenIcon"></i>`);
+     $('#pollenIndicator').removeClass('hidden');
   }
   if(count===0){
     if (userTime < "18:00") {
